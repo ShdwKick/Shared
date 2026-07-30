@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="BurningHouse">
+  <!-- Эталонный знак: пламя, внутри которого пустотой вырезан дом.
+       Градиент объявлен ВНУТРИ файла намеренно — вынесенный наружу не увидит
+       переменные сервиса и уедет в чёрный (см. Design/mark.md).
+       Фолбэки в var() обязательны: как фавикон или в <img> переменные не работают. -->
+  <defs>
+    <linearGradient id="bh-flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="var(--flame-base, #c2410c)"/>
+      <stop offset="1" stop-color="var(--flame-tip, #ffa62b)"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bh-flame)" fill-rule="evenodd"
+        d="M12 1.2C13.6 5 16.4 6.6 18.2 9.4C21.4 14.4 18.6 22.4 12 22.4C5.4 22.4 2.6 14.4 5.8 9.4C7.2 7.2 9.2 6 10.2 3.4C10.9 5.6 11.4 6.6 12 7.4C12.4 5.6 12.3 3.4 12 1.2ZM12 9.8 7.4 13.6V19.2H16.6V13.6Z"/>
+</svg>
