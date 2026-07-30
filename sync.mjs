@@ -58,7 +58,14 @@ for (const target of TARGETS) {
     const dest = path.join(dir, file);
     const have = fs.existsSync(dest) ? fs.readFileSync(dest, "utf8") : null;
 
-    if (have === want) {
+    // Сравниваем, приведя переводы строк к общему виду. На Windows git сам
+    // переводит рабочую копию в CRLF (core.autocrlf), и побайтовое сравнение
+    // начинало бы кричать о расхождении после каждого clone, checkout или
+    // stash — при полностью одинаковом содержимом. Хук, который врёт, быстро
+    // приучает жать --no-verify, и тогда он бесполезен.
+    const eol = s => (s === null ? null : s.replace(/\r\n/g, "\n"));
+
+    if (eol(have) === eol(want)) {
       console.log(`  совпадает  ${target.dir}/${file}`);
       continue;
     }
