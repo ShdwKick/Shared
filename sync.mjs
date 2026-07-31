@@ -28,8 +28,8 @@ const SRC = path.join(ROOT, "Shared");
 const TARGETS = [
   { name: "Вход",        dir: "Auth/assets",    files: ["brand.css", "brand.js"] },
   { name: "Мои финансы", dir: "Финансы/assets", files: ["brand.css", "brand.js"] },
+  { name: "Куда поедем?",   dir: "Trip/assets",   files: ["brand.css", "brand.js"] },
   // { name: "Что смотрим", dir: "Movies/assets", files: ["brand.css", "brand.js"] },
-  // { name: "Куда едем",   dir: "Trip/assets",   files: ["brand.css", "brand.js"] },
 ];
 
 const BANNER = {
