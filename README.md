@@ -74,3 +74,13 @@ cp ../Shared/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
 но задевает деплой (Dockerfile «Финансов», `.dockerignore` в Auth, пример сервиса
 и `INTEGRATION.md`), поэтому делать его заодно со стилями я не стал — это
 отдельный шаг, который стоит делать с проверкой сборки.
+
+## admin-internal.js
+
+Как `auth-client.js` — копия руками рядом с `server.js` каждого сервиса, не
+через `sync.mjs` (тот раскладывает только `assets/`, а этот файл серверный).
+Даёт сервису две вещи для Admin: `checkAdminKey(req)` — проверка общего секрета
+`ADMIN_INTERNAL_KEY` на вызовах `/internal/*` (это server-to-server, не SSO), и
+`createAdminLog(db)` — таблица логов поверх уже открытого SQLite сервиса,
+которую Admin читает через `/internal/logs`. Подробности и пример использования
+— в шапке самого файла.

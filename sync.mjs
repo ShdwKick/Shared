@@ -30,6 +30,8 @@ const TARGETS = [
   { name: "Мои финансы", dir: "Финансы/assets", files: ["brand.css", "brand.js"] },
   { name: "Куда поедем?",   dir: "Trip/assets",   files: ["brand.css", "brand.js"] },
   { name: "Что смотрим?",   dir: "Movies/assets", files: ["brand.css", "brand.js"] },
+  { name: "Админка",     dir: "Admin/assets",   files: ["brand.css", "brand.js"] },
+  { name: "Главная",     dir: "Home/assets",    files: ["brand.css", "brand.js"] },
 ];
 
 const BANNER = {
