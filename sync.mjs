@@ -36,6 +36,7 @@ const TARGETS = [
   { name: "Что смотрим?",   dir: "Movies/assets", files: ["brand.css", "brand.js"] },
   { name: "Админка",     dir: "Admin/assets",   files: ["brand.css", "brand.js"] },
   { name: "Главная",     dir: "Home/assets",    files: ["brand.css", "brand.js"] },
+  { name: "Пораскинем мозгами?", dir: "Brain/assets", files: ["brand.css", "brand.js"] },
 
   // Серверные/операционные файлы — не в assets/, а в корне рядом с server.js.
   // Docker их не задевает: admin-internal.js попадает в образ явным COPY (или
