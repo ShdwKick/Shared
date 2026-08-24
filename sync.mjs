@@ -37,6 +37,7 @@ const TARGETS = [
   { name: "Админка",     dir: "Admin/assets",   files: ["brand.css", "brand.js"] },
   { name: "Главная",     dir: "Home/assets",    files: ["brand.css", "brand.js"] },
   { name: "Пораскинем мозгами?", dir: "Brain/assets", files: ["brand.css", "brand.js"] },
+  { name: "Что собираем?", dir: "Puzzle/assets", files: ["brand.css", "brand.js"] },
 
   // Серверные/операционные файлы — не в assets/, а в корне рядом с server.js.
   // Docker их не задевает: admin-internal.js попадает в образ явным COPY (или
@@ -47,6 +48,7 @@ const TARGETS = [
   { name: "Куда поедем? (корень)",   dir: "Trip",   files: ["admin-internal.js", "set-env.sh"] },
   { name: "Что смотрим? (корень)",   dir: "Movies", files: ["admin-internal.js", "set-env.sh"] },
   { name: "Админка (корень)",     dir: "Admin",   files: ["set-env.sh"] }, // не callee /internal/* — admin-internal.js не нужен
+  { name: "Что собираем? (корень)", dir: "Puzzle", files: ["admin-internal.js", "set-env.sh"] },
 ];
 
 const BANNER = {
